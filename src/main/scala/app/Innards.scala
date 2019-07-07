@@ -28,10 +28,11 @@ object Codecs {
 
 
 object Endpoints {
+  private val root = "src/main/resources"
+
   val all: HttpHandler = {
-    //TODO: should be src/example now
-    case GET("/")  => static("src/main/resources", "/index.html")
-    case GET(path) => static("src/main/resources", path)
+    case GET("/")  => static(root, "/index.html")
+    case GET(path) => static(root, path)
   }
 }
 
