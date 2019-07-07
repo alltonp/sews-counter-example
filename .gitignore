@@ -1,0 +1,6 @@
+*.class
+*.log
+.idea
+elm-stuff
+src/main/elm/Codec.elm
+src/main/resources/js/elm.js
