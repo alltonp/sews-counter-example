@@ -24,10 +24,8 @@ case class ModelUpdated(model: ServerModel) extends FromServer
 
 
 //UPDATE
-//TODO: feels like subscribers should be defaulted
 //TODO: could serverUpdate be a function too?
-case class ServerUpdate(msgCodec: JsonCodec[ToServer, FromServer], db: Db[ServerModel], subscribers: Subscribers = Subscribers(Nil)
-                       ) extends Update[ToServer, ServerModel, FromServer] {
+case class ServerUpdate(msgCodec: JsonCodec[ToServer, FromServer], db: Db[ServerModel]) extends Update[ToServer, ServerModel, FromServer] {
 
   private val wsCmd = WsCmd(msgCodec, subscribers)
   private val dbCmd = DbCmd(db)

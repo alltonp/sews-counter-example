@@ -29,7 +29,7 @@ lazy val sewsCounterExample = project.in(file("."))
 
 libraryDependencies ++= Seq(
   "im.mange" %% "little" % "0.0.60", //TODO: inline what's needed in sews-db
-  "im.mange" %% "sews" % "0.0.23",
+  "im.mange" %% "sews" % "0.0.27",
   "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 )
 
